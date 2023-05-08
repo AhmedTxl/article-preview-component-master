@@ -1,0 +1,285 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&family=Lexend+Deca&display=swap");
+
+/*
+    2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+*/
+body {
+  font-family: "Manrope", sans-serif;
+  color: #000;
+  background: hsl(210, 46%, 95%);
+  text-align: center;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*
+    6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: 0.6rem;
+  background: #fff;
+  max-height: 380px;
+  width: 44.865rem;
+  box-shadow: -1px 10px 27px -20px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: -1px 10px 27px -20px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: -1px 10px 27px -20px rgba(0, 0, 0, 0.4);
+}
+
+.drawer {
+  object-fit: cover;
+  object-position: left;
+  width: 17.89rem;
+  height: 100%;
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  text-align: left;
+  gap: 1em;
+  padding: 2rem 2.25rem;
+}
+
+h1 {
+  font-size: 21px;
+  line-height: 30px;
+  letter-spacing: 0.285px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+
+.articleText {
+  font-size: 13px;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+  letter-spacing: 0.145px;
+}
+
+.creatorContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.845em;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleCreator {
+  color: hsl(217, 19%, 35%);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.articleDate {
+  color: hsl(214, 17%, 51%);
+  font-size: 13px;
+}
+
+.avatar {
+  border-radius: 90%;
+  width: 40px;
+}
+
+#shareBtn {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  padding: 7px;
+  z-index: 99;
+  border-radius: 50%;
+  background: hsl(210deg 50.31% 90.91%);
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  transition-duration: 190ms;
+}
+
+#shareBtn:hover {
+  background: hsl(214.29deg 16.94% 51.37%);
+}
+
+#shareBtn:hover svg path {
+  fill: hsl(210deg 50.31% 90.91%);
+}
+
+#shareBtn:active {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 28px 18px -5px inset;
+}
+
+#popup {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(71%, 0%);
+  gap: 1rem;
+  padding: 1rem 2.195rem;
+  border-radius: 0.6rem;
+  background: hsl(217, 19%, 35%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#popup.show {
+  opacity: 1;
+}
+
+#popup::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.625rem;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+  left: 47.5%;
+  top: 99%;
+  z-index: 6;
+}
+
+.shareText {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    display: flex;
+    width: 355px;
+    max-height: 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  h1 {
+    font-size: 18px;
+    line-height: 1.365em;
+  }
+
+  .text {
+    padding: 2rem 2rem 0 2rem;
+  }
+
+  .drawer {
+    width: 100%;
+    height: 76%;
+    border-radius: 0.6rem 0.6rem 0 0;
+  }
+
+  .creatorContainer {
+    margin-top: 17px;
+    margin-bottom: 17px;
+  }
+
+  #popup {
+    position: absolute;
+    align-items: center;
+    justify-content: flex-start;
+    background: hsl(217, 19%, 35%);
+    top: 47%;
+    left: 50%;
+    gap: 1rem;
+    padding: 1.6rem 2.195rem;
+    transform: translate(-50%, 15rem);
+    width: 17.8945rem;
+    border-radius: 0 0 0.6em 0.6em;
+  }
+
+  #popup::after {
+    border-style: none;
+  }
+}
