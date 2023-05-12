@@ -129,6 +129,9 @@ h1 {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  transition-duration: 190ms;
 }
 
 .userContainer {
@@ -203,6 +206,9 @@ h1 {
   background: hsl(217, 19%, 35%);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+  transition-duration: 190ms;
 }
 
 #popup.show {
@@ -325,6 +331,9 @@ h1 {
     transform: translate(-50%, 15rem);
     width: 17.8945rem;
     border-radius: 0 0 0.6em 0.6em;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+    transition-duration: 190ms;
   }
 
   #popup::after {
