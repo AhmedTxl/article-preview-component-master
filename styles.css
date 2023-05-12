@@ -202,7 +202,7 @@ h1 {
   border-radius: 0.6rem;
   background: hsl(217, 19%, 35%);
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 #popup.show {
@@ -245,7 +245,7 @@ h1 {
   width: 86px;
   height: 86px;
   z-index: 99;
-  transition: all 0.25s ease-in;
+  transition: all 0.215s ease-in;
 }
 
 .attribution a {
@@ -271,7 +271,7 @@ h1 {
   align-items: center;
   position: relative;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.26s ease-in-out;
 }
 
 .attribution img:hover {
